@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  li {
+    @apply bg-[#fff] flex justify-between relative p-[10px] my-[10px] shadow-lg;
+  }
+
+  .minus {
+    @apply border-r-[5px] border-solid border-[#c0392b];
+  }
+  .plus {
+    @apply border-r-[5px] border-solid border-[#2ecc71];
+  }
+  .delete-btn {
+    @apply bg-[#e74c3c] border-0 text-[#fff] text-[20px] leading-[20px] py-[2px] px-[5px] absolute top-[50%] left-0.5 opacity-0 transition-[0.5] cursor-pointer translate-x-[-100%] translate-y-[-50%];
+  }
+  li:hover .delete-btn {
+    @apply opacity-[1];
+  }
+
+}
