@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-[rgb(156,136,255)] max-h-[100vh]">
+    <p class="text-center mt-[15px] font-[600] text-[22px]">
+      Personal Accounting
+    </p>
+    <div class="w-[350px] px-[20px] mx-[auto] mt-[30px] bg-white text-gray-700">
+      <p class="pt-6 font-[500] text-[25px] leading-[0.5]">Your Balance</p>
+      <p id="balance" class="font-[500] text-[30px]">&#8358 0</p>
+      <!-- income and expenses -->
+      <section
+        class="flex justify-evenly items-center mt-2 h-[9rem] shadow-lg shadow-gray-300"
+      >
+        <!-- income -->
+        <div>
+          <p class="font-[500] text-[20px]">INCOME</p>
+          <p class="text-[20px] text-green-400" id="income"> &#8358 N0.00</p>
+        </div>
+        <!-- expenses -->
+        <div>
+          <p class="font-[500] text-[20px]">EXPENSE</p>
+          <p class="text-[20px] text-red-700" id="expense">&#8358 0.00</p>
+        </div>
+      </section>
+
+      <p class="mt-[40px] mb-[10px] font-[600] text-[20px] pb-[8px]">
+        Add new transaction
+      </p>
+      <hr />
+      <form id="form">
+
+        <label class="my-[30px]" for="description">Description</label>
+        <input
+        class="block border w-[100%] p-[10px]"
+        id="description"
+        type="text"
+        placeholder="Enter text"
+        />
+        
+        <label class="pt-11" for="amount"
+        >Amount <br />(Eg. -100 for expense, 100 for income)
+      </label>
+      <input
+      class="block border w-[100%] p-[10px]"
+      id="amount"
+      type="text"
+      placeholder="Enter amount"
+      />
+      
+      <button
+      class="w-[100%] mt-4 text-white bg-[rgb(157,136,255)] p-2 border-2 border-black"
+      id="add-transaction"
+      >
+      Add Transaction
+    </button>
+  </form>
+    
+      <p class="mt-[60px] font-[600] text-[20px] pb-1">History</p>
+      <hr />
+
+      <ul id="list" class="py-[5px] mb-[40px]">
+        <!-- <li class="minus">Cash <span>-400</span> <button class="delete-btn">x</button> </li>
+        <li class="plus">Cash <span>-400</span> <button class="delete-btn">x</button> </li> -->
+    </ul>
+
+    </div>
+
+    <script src="./src/script.js"></script>
+  </body>
+</html>
